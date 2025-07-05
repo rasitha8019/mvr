@@ -24,7 +24,9 @@ const Contact = () => {
               <h3 className="text-lg font-semibold text-gray-800">Address</h3>
               <p className="text-gray-600 text-sm">
                 MVR Soft Solutions, <br />
-                Hitech City, Hyderabad, Telangana, India - 500081
+                H.no: 5-21, road no: 8, VR Colony, Gokul Plots, 9th phase
+                <br />
+                KPHB, Hyderabad, 500085
               </p>
             </div>
           </div>
@@ -33,7 +35,7 @@ const Contact = () => {
             <FaPhone className="text-yellow-500 text-2xl mt-1" />
             <div>
               <h3 className="text-lg font-semibold text-gray-800">Phone</h3>
-              <p className="text-gray-600 text-sm">+91 98765 43210</p>
+              <p className="text-gray-600 text-sm">+91 8179721555</p>
             </div>
           </div>
 
@@ -41,7 +43,9 @@ const Contact = () => {
             <FaEnvelope className="text-yellow-500 text-2xl mt-1" />
             <div>
               <h3 className="text-lg font-semibold text-gray-800">Email</h3>
-              <p className="text-gray-600 text-sm">contact@mvrsoft.com</p>
+              <p className="text-gray-600 text-sm">
+                hrmvrsoftsolutions@gmail.com
+              </p>
             </div>
           </div>
         </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import { assests } from "../assets/assests";
 import { FaLinkedin, FaInstagram, FaFacebook } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -34,31 +35,26 @@ const Footer = () => {
             </h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a
-                  href="/"
+                <NavLink
+                  to={
+                    "https://www.linkedin.com/in/mvr-soft-solutions-497114373?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                  }
                   className="hover:text-yellow-400 flex items-center gap-2"
                 >
                   <FaLinkedin />
                   Linkedin
-                </a>
+                </NavLink>
               </li>
               <li>
-                <a
-                  href="/about"
+                <NavLink
+                  to={
+                    "https://www.instagram.com/mvrsoftsolutions?utm_source=qr&igsh=MXM0dzVhbzkxNXpvbw=="
+                  }
                   className="hover:text-yellow-400 flex items-center gap-2"
                 >
                   <FaInstagram />
                   Instagram
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/courses"
-                  className="hover:text-yellow-400 flex items-center gap-2"
-                >
-                  <FaFacebook />
-                  Facebook
-                </a>
+                </NavLink>
               </li>
             </ul>
           </div>
@@ -68,9 +64,15 @@ const Footer = () => {
             <h3 className="text-md font-semibold text-white mb-4 uppercase">
               Get In Touch
             </h3>
-            <p className="text-sm text-gray-400">📍 Hitech City, Hyderabad</p>
-            <p className="text-sm text-gray-400 mt-2">📞 +91 98765 43210</p>
-            <p className="text-sm text-gray-400 mt-2">✉️ contact@mvrsoft.com</p>
+            <p className="text-sm text-gray-400">
+              📍 MVR Soft Solutions, <br />
+              5-21, road no 8, VR Colony, Gokul Plots, 9th phase KPHB,
+              Hyderabad, 500085{" "}
+            </p>
+            <p className="text-sm text-gray-400 mt-2">📞 +91 8179721555</p>
+            <p className="text-sm text-gray-400 mt-2">
+              ✉️ hrmvrsoftsolutions@gmail.com
+            </p>
           </div>
         </div>
 
