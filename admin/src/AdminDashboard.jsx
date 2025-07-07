@@ -6,18 +6,11 @@ const AdminDashboard = ({ onLogout }) => {
 
   const fetchData = async () => {
     const token = localStorage.getItem("adminToken");
-    try {
-      const res = await fetch(`${baseUrl}/api/admin/data`, {
-        headers: { Authorization: `Bearer ${token}` },
-      });
-      const data = await res.json();
-
-      if (!res.ok) throw new Error(data?.error || "Failed to fetch data");
-      setSubmissions(data);
-    } catch (err) {
-      console.error("Admin fetch error:", err.message);
-      toast.error("Failed to load submissions.");
-    }
+    const res = await fetch(`${baseUrl}/api/admin/data`, {
+      headers: { Authorization: `Bearer ${token}` },
+    });
+    const data = await res.json();
+    setSubmissions(data);
   };
 
   useEffect(() => {
