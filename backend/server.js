@@ -24,6 +24,9 @@ const FormSchema = new mongoose.Schema(
 );
 
 const FormEntry = mongoose.model("FormEntry", FormSchema);
+app.get("/", (req, res) => {
+  res.send("API is running...");
+});
 
 app.post("/api/form", async (req, res) => {
   const entry = new FormEntry(req.body);
