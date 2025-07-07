@@ -15,14 +15,23 @@ const Form = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await fetch(`${baseUrl}/api/form`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
-    });
-    toast.success("Form submitted successfully!");
+    try {
+      const res = await fetch(`${baseUrl}/api/form`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
 
-    setFormData({ name: "", email: "", phone: "", message: "" });
+      if (res.ok) {
+        toast.success("Form submitted successfully!");
+        setFormData({ name: "", email: "", phone: "", message: "" });
+      } else {
+        toast.error("Failed to submit form.");
+      }
+    } catch (err) {
+      toast.error("Error connecting to server.");
+      console.error(err);
+    }
   };
 
   return (
