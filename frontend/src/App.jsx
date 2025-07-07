@@ -8,10 +8,11 @@ import Facilities from "./pages/Facilities";
 import Login from "./pages/Login";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-
+import { ToastContainer } from "react-toastify";
 const App = () => {
   return (
     <div className="flex flex-col min-h-screen">
+      <ToastContainer />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
